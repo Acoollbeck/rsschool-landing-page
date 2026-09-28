@@ -8,3 +8,20 @@ burger.addEventListener('click', () => {
   header.classList.toggle('active')
   body.classList.toggle('overflow')
 })
+
+header.addEventListener('click', (event) => {
+  if(event.target.matches('.header__item')) {
+    alert('хуй')
+    nav.classList.toggle('active')
+    header.classList.toggle('active')
+    body.classList.toggle('overflow')
+  }
+})
+
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') {
+    nav.classList.toggle('active')
+    header.classList.toggle('active')
+    body.classList.toggle('overflow')
+  }
+})
